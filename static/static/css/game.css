@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    height: 100vh;
+    background-image: url("/Galaxie_Sanchez/images/bg_space.jpg");
+    -webkit-background-size: cover;
+	background-size: cover;
+	animation: defile 20s linear infinite;
+}
+
+@keyframes defile {
+    0% { background-position-x:   0; }
+  100% { background-position-y: 100vw; }
+}
+    
+    
