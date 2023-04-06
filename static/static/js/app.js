@@ -5,7 +5,7 @@ const config = {
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: {y: 200}
+            gravity: {y: 0}
         }
     },
     scene: {
@@ -35,18 +35,23 @@ function create() {
 }
 
 function update() {
-    dude.setVelocityX(0)
+    dude.setVelocityX(0, 0)
+    
+
+    if(cursors.down.isDown){
+        dude.setVelocity(0, 300)
+    }
 
     if(cursors.up.isDown){
         dude.setVelocity(0, -300)
     }
 
     if(cursors.right.isDown){
-        dude.setVelocity(100, 0)
+        dude.setVelocity(300, 0)
     }
     
     if(cursors.left.isDown){
-        dude.setVelocity(-100, 0)
+        dude.setVelocity(-300, 0)
     }
     
     
