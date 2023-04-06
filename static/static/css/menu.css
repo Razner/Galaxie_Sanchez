@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-image: url('https://usagif.com/wp-content/uploads/gif/outerspace-6.gif');
+	font-family: 'VT323', monospace ;
+	font-size: 24px;
+}
+
+.choice-vessel {
+    margin-top: 25%;
+    margin-left: 20%;
+}
+
+#vessel {
+    width: 15vw;
+    height: 10vw;
+}
+
+.menu {
+    margin-top: 3%;
+}
+
+.button {
+    display: flex;
+    margin-top: 1%;
+    margin-left: 45%;
+    width: 10%;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    color: #FBC638;
+    background: #6225E6;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+}
+
+a {
+    font-family: 'VT323', monospace ;
+	font-size: 38px;
+    text-decoration: none;
+    color: #FBC638;
+}
+
+.button:focus {
+   outline: none; 
+}
+
+.button:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+}
+
+#pseudo {
+    margin-left: 45.5%;
+    border-radius: 20px;
+    padding-left: 0.5%;
+}
