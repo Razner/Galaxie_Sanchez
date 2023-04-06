@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-image: url('https://usagif.com/wp-content/uploads/gif/outerspace-6.gif');
+	font-family: 'VT323', monospace ;
+	font-size: 24px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    margin: 15%;
+    padding: 15%;
+}
+
+
+h1 {
+   color: #FBC638; 
+   font-size: 90px;
+}
+
+button {
+    display: flex;
+    margin-top: 7%;
+    margin-left: 7%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    color: #FBC638;
+    background: #6225E6;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+    gap: 2%;
+}
+
+a {
+    font-family: 'VT323', monospace ;
+	font-size: 38px;
+    text-decoration: none;
+    color: #FBC638;
+}
+
+button:focus {
+   outline: none; 
+}
+
+button:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+}
+
+.about {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 2%;
+    margin-bottom: 1%;
+}

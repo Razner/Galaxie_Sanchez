@@ -5,7 +5,7 @@
 
 .background {
     height: 100vh;
-    background-image: url("/Galaxie_Sanchez/images/bg_space.jpg");
+    background-image: url("/images/bg_space.jpg");
     -webkit-background-size: cover;
 	background-size: cover;
 	animation: defile 20s linear infinite;
