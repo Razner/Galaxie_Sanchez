@@ -1,6 +1,8 @@
 const config = {
-    with: 1000,
+    width: window.innerWidth,
+    height: window.innerHeight,
     type: Phaser.AUTO,
+    transparent: true,
     physics: {
         default: 'arcade',
         arcade: {
@@ -30,7 +32,6 @@ function create() {
     vessel.scaleX = 0.2
     vessel.scaleY = 0.2
     vessel.body.collideWorldBounds = true
-
 
     cursors = this.input.keyboard.createCursorKeys()
 
