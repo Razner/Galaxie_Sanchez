@@ -1,6 +1,5 @@
 const config = {
-    with: 500,
-    height: 800,
+    with: 1000,
     type: Phaser.AUTO,
     physics: {
         default: 'arcade',
@@ -18,40 +17,48 @@ const config = {
 
 
 var game = new Phaser.Game(config)
-let dude 
+let vessel 
 let cursors
 
 function preload() {
-    this.load.image('dude', 'dude.png' )
+    this.load.image('vessel', 'vessel.png' )
 
 }
 
 function create() {
-    dude = this.physics.add.image(100, 100, 'dude')
-    dude.body.collideWorldBounds = true
+    vessel = this.physics.add.image(500, 500, 'vessel')
+    vessel.scaleX = 0.2
+    vessel.scaleY = 0.2
+    vessel.body.collideWorldBounds = true
+
 
     cursors = this.input.keyboard.createCursorKeys()
 
 }
 
 function update() {
-    dude.setVelocityX(0, 0)
+    vessel.setVelocityX(0, 0)
+    vessel.setVelocityY(0, 0)
     
 
     if(cursors.down.isDown){
-        dude.setVelocity(0, 300)
+        vessel.setVelocity(0, 400)
+    }
+
+    if(cursors.down.isDown){
+        vessel.setVelocity(0, 400)
     }
 
     if(cursors.up.isDown){
-        dude.setVelocity(0, -300)
+        vessel.setVelocity(0, -400)
     }
 
     if(cursors.right.isDown){
-        dude.setVelocity(300, 0)
+        vessel.setVelocity(400, 0)
     }
     
     if(cursors.left.isDown){
-        dude.setVelocity(-300, 0)
+        vessel.setVelocity(-400, 0)
     }
     
     
