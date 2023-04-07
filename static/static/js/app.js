@@ -23,7 +23,7 @@ let vessel
 let cursors
 
 function preload() {
-    this.load.image('vessel', '/Galaxie_Sanchez/images/vessel.png' )
+    this.load.image('vessel', '/images/vessel.png' )
 
 }
 
