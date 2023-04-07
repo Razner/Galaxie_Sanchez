@@ -1,11 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-.background {
     height: 100vh;
-    background-image: url("/images/bg_space.jpg");
+    background-image: url("https://wallpaperaccess.com/full/1314202.jpg");
     -webkit-background-size: cover;
 	background-size: cover;
 	animation: defile 20s linear infinite;
