@@ -21,6 +21,7 @@ const config = {
 var game = new Phaser.Game(config)
 let vessel 
 let cursors
+vessel = center
 
 function preload() {
     this.load.image('vessel', '/Galaxie_Sanchez/images/vessel.png' )
@@ -65,11 +66,13 @@ function update() {
         vessel.setVelocity(-400, 0)
     }
 
-    if(cursors.space.isDown){
-        laser = this.physics.add.image(500, 500, 'laser')
+    if(cursors.space.isDown){ 
+        laser = this.physics.add.image(vessel.x, vessel.y , 'laser') 
+        laser.setOrigin(0.5, 0.5) // set the origin to the center of the image
         laser.scaleX = 0.3
-        laser.scaleY = 0.3
-        laser.body.collideWorldBounds = true
+        laser.scaleY = 0.3   
+        laser.setVelocity(0, -300) 
+
     }
     
     
