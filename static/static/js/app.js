@@ -24,6 +24,7 @@ let cursors
 
 function preload() {
     this.load.image('vessel', '/Galaxie_Sanchez/images/vessel.png' )
+    this.load.image('laser', '/Galaxie_Sanchez/images/laser.png' )
 
 }
 
@@ -33,18 +34,20 @@ function create() {
     vessel.scaleY = 0.2
     vessel.body.collideWorldBounds = true
 
+    
+
+    
+
     cursors = this.input.keyboard.createCursorKeys()
+    
 
 }
 
 function update() {
-    vessel.setVelocityX(0, 0)
-    vessel.setVelocityY(0, 0)
     
 
-    if(cursors.down.isDown){
-        vessel.setVelocity(0, 400)
-    }
+    vessel.setVelocityX(0, 0)
+    vessel.setVelocityY(0, 0)
 
     if(cursors.down.isDown){
         vessel.setVelocity(0, 400)
@@ -60,6 +63,13 @@ function update() {
     
     if(cursors.left.isDown){
         vessel.setVelocity(-400, 0)
+    }
+
+    if(cursors.space.isDown){
+        laser = this.physics.add.image(500, 500, 'laser')
+        laser.scaleX = 0.3
+        laser.scaleY = 0.3
+        laser.body.collideWorldBounds = true
     }
     
     
