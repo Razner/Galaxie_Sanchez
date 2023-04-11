@@ -21,11 +21,10 @@ const config = {
 var game = new Phaser.Game(config)
 let vessel 
 let cursors
-vessel = center
 
 function preload() {
-    this.load.image('vessel', '/Galaxie_Sanchez/images/vessel.png' )
-    this.load.image('laser', '/Galaxie_Sanchez/images/laser.png' )
+    this.load.image('vessel', '/images/vessel.png' )
+    this.load.image('laser', '/images/laser.png' )
 
 }
 
@@ -34,11 +33,7 @@ function create() {
     vessel.scaleX = 0.2
     vessel.scaleY = 0.2
     vessel.body.collideWorldBounds = true
-
-    
-
-    
-
+   
     cursors = this.input.keyboard.createCursorKeys()
     
 
@@ -74,7 +69,5 @@ function update() {
         laser.setVelocity(0, -300) 
 
     }
-    
-    
 
 }
