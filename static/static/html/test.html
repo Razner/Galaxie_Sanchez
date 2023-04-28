@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mon jeu 2D</title>
+  <meta charset="UTF-8">
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+    #vessel-selector {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 400px;
+      height: 100px;
+      border: 1px solid black;
+      margin: 20px auto;
+      padding: 10px;
+    }
+    #vessel-img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    #vessel-prev-btn, #vessel-next-btn {
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      border-radius: 50%;
+      border: none;
+      background-color: #ccc;
+      color: #000;
+      cursor: pointer;
+    }
+    #vessel-prev-btn:focus, #vessel-next-btn:focus {
+      outline: none;
+    }
+    #vessel-prev-btn:hover, #vessel-next-btn:hover {
+      background-color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <section id = "Menu">
+  <h1>Choisissez votre vaisseau</h1>
+  <div id="vessel-selector">
+    <button id="vessel-prev-btn">&lt;</button>
+    <div id="vessel-img-container">
+      <img src="" alt="vessel" id = "vessel-img">
+    </div>
+    <button id="vessel-next-btn">&gt;</button>
+  </div>
+  <button id="start-bnt">Choisir et démarrer le jeu</button>
+  <canvas id="canvas" width="800" height="600"></canvas>
+  </section>
+  <script src="/static/static/js/vessel.js" type = "module"></script>
+  <section style = "display: none;" id ="game">
+  <script src="/static/static/js/game.js" type = "module"></script>
+  <link rel="stylesheet" href="../css/game.css">
+  <img id = "game-vessel"href="">
+  </section>
+  <data style="display: none;">
+  <p id = "srcimg"></p>
+  <p id = "namevessel"></p>
+</data>
+</body>
+</html>
