@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/menu.css">
-    <link rel="shortcut icon" href="/images/icon-retro.png">
-    <title>Galaxie Sanchez</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="shortcut icon" href="/images/icon-retro.png">
+  <title>Galaxie Sanchez</title>
 </head>
 <body>
-    <div class="container-choice">
-        <div class="choice-vessel">
-            <img id="vessel" src="/images/vessel.png" alt="vessel">
-        </div>
-    </div>    
-    <div class="menu">
-        <form action="">
-            <input type="text" name="name" id="pseudo" required="required" placeholder="Pseudo...">
-            <button class="button"><a href="game.html">Play</a></button>
-            <button class="button"><a href="homepage.html">Return</a></button>
-        </form>
+  <h1>Choose your vessel and laser</h1>
+  <div id="vessel-selector">
+    <button id="vessel-prev-btn">&lt;</button>
+    <div id="vessel-img-container">
+      <img id="vessel-img" src="">
     </div>
+    <button id="vessel-next-btn">&gt;</button>
+  </div>
+  <div id="laser-selector">
+    <button id="laser-prev-btn">&lt;</button>
+    <div id="laser-img-container">
+      <img id="laser-img" src="">
+    </div>
+    <button id="laser-next-btn">&gt;</button>
+  </div>
+  <div class="menu">
+    <form action="">
+      <input type="text" name="name" id="pseudo" required="required" placeholder="Pseudo...">
+      <button class="button"><a href="game.html">Play</a></button>
+      <button class="button"><a href="homepage.html">Return</a></button>
+    </form>
+  </div>
 </body>
 </html>
