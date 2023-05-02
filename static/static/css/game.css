@@ -1,16 +1,19 @@
-* {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-image: url("https://wallpaperaccess.com/full/1314202.jpg");
-    -webkit-background-size: cover;
-	background-size: cover;
-	animation: defile 20s linear infinite;
-}
-
-@keyframes defile {
-    0% { background-position-x:   0; }
-  100% { background-position-y: 100vw; }
-}
-    
-    
+body {
+    margin : 0 0 0 0 ;
+    padding: 0 0 0 0;
+  }
+  #game {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url("https://wallpaperaccess.com/full/1314202.jpg");
+      -webkit-background-size: cover;
+      background-size: cover;
+      animation: defile 20s linear infinite;
+  }
+  
+  @keyframes defile {
+      0% { background-position-x:   0; }
+    100% { background-position-y: 100vw; }
+  }
+     
