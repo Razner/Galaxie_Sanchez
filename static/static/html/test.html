@@ -3,41 +3,7 @@
 <head>
   <title>Mon jeu 2D</title>
   <meta charset="UTF-8">
-  <style>
-    canvas {
-      border: 1px solid black;
-    }
-    #vessel-selector {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 400px;
-      height: 100px;
-      border: 1px solid black;
-      margin: 20px auto;
-      padding: 10px;
-    }
-    #vessel-img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-    #vessel-prev-btn, #vessel-next-btn {
-      width: 50px;
-      height: 50px;
-      font-size: 24px;
-      border-radius: 50%;
-      border: none;
-      background-color: #ccc;
-      color: #000;
-      cursor: pointer;
-    }
-    #vessel-prev-btn:focus, #vessel-next-btn:focus {
-      outline: none;
-    }
-    #vessel-prev-btn:hover, #vessel-next-btn:hover {
-      background-color: #aaa;
-    }
-  </style>
+  <link rel="stylesheet" href="../css/test.css">
 </head>
 <body>
   <section id = "Menu">
@@ -61,6 +27,7 @@
   <data style="display: none;">
   <p id = "srcimg"></p>
   <p id = "namevessel"></p>
+  <p id = "vesselsize"></p>
 </data>
 </body>
 </html>
