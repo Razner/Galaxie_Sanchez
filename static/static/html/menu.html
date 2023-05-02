@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/menu.css">
-    <link rel="shortcut icon" href="/images/icon-retro.png">
-    <title>Galaxie Sanchez</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/game.css">
+  <link rel="shortcut icon" href="/images/icon-retro.png">
+  <title>Galaxie Sanchez</title>
 </head>
 <body>
-    <div class="container-choice">
-        <div class="choice-vessel">
-            <img id="vessel" src="/images/vessel.png" alt="vessel">
-        </div>
-    </div>    
-    <div class="menu">
-        <form action="">
-            <input type="text" name="name" id="pseudo" required="required" placeholder="Pseudo...">
-            <button class="button"><a href="game.html">Play</a></button>
-            <button class="button"><a href="homepage.html">Return</a></button>
-        </form>
+  <section id = "Menu">
+    <h1>Choose your vessel and laser</h1>
+    <div id="vessel-selector">
+      <button id="vessel-prev-btn">&lt;</button>
+      <div id="vessel-img-container">
+        <img src="" alt="vessel" id="vessel-img">
+      </div>
+      <button id="vessel-next-btn">&gt;</button>
     </div>
+    <div id="laser-selector">
+      <button id="laser-prev-btn">&lt;</button>
+      <div id="laser-img-container">
+        <img src="" alt="laser" id="laser-img">
+      </div>
+      <button id="laser-next-btn">&gt;</button>
+    </div>
+    <button class="start-bnt" id = "start-bnt">Play</button>
+    <button id="button"><a href="../html/homepage.html">Return</a></button>
+    </section>
+    <script src="/static/static/js/vessel.js" type = "module"></script>
+    <script src="/static/static/js/laser.js" type = "module"></script>
+    <section style = "display: none;" id ="game">
+    <script src="/static/static/js/game.js" type = "module"></script>
+    <img id = "game-vessel"href="">
+    <img id = "game-laser"href="">
+    </section>
+    <data style="display: none;">
+    <p id = "srcimg"></p>
+    <p id = "namevessel"></p>
+    <p id = "srclaser"></p>
+    <p id = "namelaser"></p>
+  </data>
 </body>
 </html>
