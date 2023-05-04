@@ -10,7 +10,7 @@
   <title>Galaxie Sanchez</title>
 </head>
 <body>
-  <section id = "Menu">
+  <section id="Menu">
     <h1>Choose your vessel and laser</h1>
     <div id="vessel-selector">
       <button id="vessel-prev-btn">&lt;</button>
@@ -26,21 +26,25 @@
       </div>
       <button id="laser-next-btn">&gt;</button>
     </div>
-    <button class="start-bnt" id = "start-bnt">Play</button>
+    <button class="start-bnt" id="start-bnt">Play</button>
     <button id="button"><a href="../html/homepage.html">Return</a></button>
-    </section>
-    <script src="/static/static/js/vessel.js" type = "module"></script>
-    <script src="/static/static/js/laser.js" type = "module"></script>
-    <section style = "display: none;" id ="game">
-    <script src="/static/static/js/game.js" type = "module"></script>
-    <img id = "game-vessel"href="">
-    <img id = "game-laser"href="">
-    </section>
-    <data style="display: none;">
-    <p id = "srcimg"></p>
-    <p id = "namevessel"></p>
-    <p id = "srclaser"></p>
-    <p id = "namelaser"></p>
+  </section>
+  
+  <section style="display:none;" id="game">
+    <img id="game-vessel" href="">
+    <img id="game-laser" href="">
+    <canvas id="canvas"></canvas>
+    <script src="/static/static/js/vessel.js" type="module"></script>
+    <script src="/static/static/js/laser.js" type="module"></script>
+    <script src="/static/static/js/game.js" type="module"></script>
+  </section>
+  
+  <data style="display:none;">
+    <p id="srcimg"></p>
+    <p id="namevessel"></p>
+    <p id="srclaser"></p>
+    <p id="namelaser"></p>
   </data>
+  
 </body>
 </html>

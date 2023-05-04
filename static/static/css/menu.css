@@ -16,6 +16,11 @@ section {
     height: 100vh;
 }
 
+#game-vessel {
+  height: 10vh;
+  width: 15vh;
+}
+
 h1 {
     display: flex;
     justify-content: center;
