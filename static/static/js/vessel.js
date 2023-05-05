@@ -29,8 +29,8 @@ function updateVessel() {
   document.getElementById("namevessel").innerHTML = currentVessel.imageSrc;
  // Dessiner le vaisseau dans le canvas
    const canvas = document.getElementById("canvas");
-   canvas.width = 400;
-   canvas.height = 400;
+   canvas.width = window.innerWidth;
+   canvas.height = window.innerHeigh;
    canvas.style.position = "absolute";
    const ctx = canvas.getContext("2d");
    const vesselImage = new Image();
