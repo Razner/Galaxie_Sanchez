@@ -27,6 +27,19 @@ function updateVessel() {
   vesselImg.style.width = currentVessel.size + "px"; // définir la taille de l'image
   document.getElementById("srcimg").innerHTML = currentVessel.name;
   document.getElementById("namevessel").innerHTML = currentVessel.imageSrc;
+ // Dessiner le vaisseau dans le canvas
+   const canvas = document.getElementById("canvas");
+   canvas.width = 400;
+   canvas.height = 400;
+   canvas.style.position = "absolute";
+   const ctx = canvas.getContext("2d");
+   const vesselImage = new Image();
+   vesselImage.src = currentVessel.imageSrc;
+   vesselImage.onload = () => {
+   ctx.clearRect(0, 0, canvas.width, canvas.height); // Effacer le contenu du canvas
+   ctx.drawImage(vesselImage, 1, 1, currentVessel.size, currentVessel.size);
+ };
+
 }
 
 // Gestionnaires d'événements pour les flèches de sélection de vaisseau
