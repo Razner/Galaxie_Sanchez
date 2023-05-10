@@ -1,16 +1,17 @@
 // Classe Vessel
 export class Laser {
-    constructor(name, imageSrc) {
+    constructor(name, imageSrc, size) {
       this.name = name;
       this.imageSrc = imageSrc;
+      this.size = size;
     }
   }
   
   // Tableau de vaisseaux
   const lasers = [
-    new Laser("Laser 1", "/images/laser1.png"),
-    new Laser("Laser 2", "/images/laser2.png"),
-    new Laser("Laser 3", "/images/laser3.png"),
+    new Laser("Laser 1", "/images/laser1.png", 60),
+    new Laser("Laser 2", "/images/laser2.png", 30),
+    new Laser("Laser 3", "/images/laser3.png", 30),
   ];
   
   // Variables pour la sélection de vaisseau
@@ -24,6 +25,8 @@ export class Laser {
   // Fonction pour changer de vaisseau
   function updateLaser() {
     const currentLaser = lasers[currentLaserIndex];
+    laserImg.src = currentLaser.imageSrc;
+    laserImg.style.width = currentLaser.size + "px";
     laserImg.src = currentLaser.imageSrc;
     document.getElementById("srcimg").innerHTML = currentLaser.name;
     document.getElementById("namelaser").innerHTML = currentLaser.imageSrc;
