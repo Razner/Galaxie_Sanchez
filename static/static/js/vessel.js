@@ -15,7 +15,7 @@ const vessels = [
 ];
 
 // Variables pour la sélection de vaisseau
-let currentVesselIndex = 0
+let currentVesselIndex = 0;
 const vesselImg = document.getElementById("vessel-img");
 const vesselPrevBtn = document.getElementById("vessel-prev-btn");
 const vesselNextBtn = document.getElementById("vessel-next-btn");
@@ -29,7 +29,7 @@ function startGame() {
   const vessel = vessels[currentVesselIndex];
   const vesselX = (canvas.width - vessel.size) / 2;
   const vesselY = canvas.height - vessel.size;
-  
+
   // Dessiner le vaisseau aux coordonnées x et y
   const ctx = canvas.getContext("2d");
   const vesselImage = new Image();
