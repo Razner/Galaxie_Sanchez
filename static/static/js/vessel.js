@@ -1,6 +1,14 @@
 // Classe Vessel
 export class Vessel {
   constructor(name, imageSrc, size) {
+    this.position = {
+      x: 200,
+      y: 200,
+    };
+    this.velocity = {
+      x: 0,
+      y: 0,
+    };
     this.name = name;
     this.imageSrc = imageSrc;
     this.size = size;
@@ -15,13 +23,52 @@ const vessels = [
 ];
 
 // Variables pour la sélection de vaisseau
-let currentVesselIndex = 0
+let currentVesselIndex = 0;
+let vesselX = 0;
+let vesselY = 0;
 const vesselImg = document.getElementById("vessel-img");
 const vesselPrevBtn = document.getElementById("vessel-prev-btn");
 const vesselNextBtn = document.getElementById("vessel-next-btn");
 
+// Variables pour le déplacement du vaisseau
+let leftArrowPressed = false;
+let rightArrowPressed = false;
+// Variables pour la sélection de vaisseau
+
+
+
+// Gestionnaires d'événements pour les touches du clavier
+window.addEventListener("keydown", (event) => {
+  if (event.code === "ArrowLeft") {
+    leftArrowPressed = true;
+  } else if (event.code === "ArrowRight") {
+    rightArrowPressed = true;
+  }
+});
+
+window.addEventListener("keyup", (event) => {
+  if (event.code === "ArrowLeft") {
+    leftArrowPressed = false;
+  } else if (event.code === "ArrowRight") {
+    rightArrowPressed = false;
+  }
+});
+
+
+
 // Fonction pour démarrer le jeu
 function startGame() {
+  vesselX = (canvas.width - vessel.size) / 2;
+  vesselY = canvas.height - vessel.size;
+  const vesselSpeed = 5; // Vitesse de déplacement du vaisseau
+
+  // Met à jour les coordonnées x du vaisseau en fonction de l'état des touches du clavier
+  if (leftArrowPressed && !rightArrowPressed) {
+    vesselX -= vesselSpeed;
+  } else if (rightArrowPressed && !leftArrowPressed) {
+    vesselX += vesselSpeed;
+  }
+
   const canvas = document.getElementById("canvas");
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
